@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Chat.cool</string>
+    <string name="sendButtonText">Send</string>
+</resources>

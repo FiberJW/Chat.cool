@@ -1,0 +1,18 @@
+query MessagesQuery {
+  messages: allMessages {
+    content,
+    createdAt,
+    id
+  }
+}
+
+subscription NewMessages {
+  Message(filter: {mutation_in: [CREATED]}) {
+    mutation
+    node {
+      id
+      content
+      createdAt
+    }
+  }
+}
