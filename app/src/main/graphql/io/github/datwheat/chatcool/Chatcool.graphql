@@ -6,13 +6,10 @@ query MessagesQuery {
   }
 }
 
-subscription NewMessages {
-  Message(filter: {mutation_in: [CREATED]}) {
-    mutation
-    node {
-      id
-      content
-      createdAt
-    }
+mutation createMessage($content: String!) {
+  message: createMessage(content: $content) {
+    content
+    id
+    createdAt
   }
 }
